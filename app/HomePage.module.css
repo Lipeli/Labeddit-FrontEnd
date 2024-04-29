@@ -1,0 +1,64 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 7.5rem;
+  }
+  
+  .welcome {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons on top of each other */
+    margin-top: 3.5rem;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Add space between buttons */
+    border: 1px solid black;
+    border-radius: 50px;
+  }
+  
+  .button:not(:last-child) {
+    margin-bottom: 10px; /* Adjust space between buttons */
+  }
+  
+  .button:hover {
+    background-color: #b76200;
+  }
+  
