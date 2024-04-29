@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './HomePage.module.css'; // Import CSS module for styling
+import { useRouter } from 'next/router';
 
 const HomePage = () => {
   return (
