@@ -42,15 +42,23 @@
     margin-top: 3.5rem;
   }
   
-  .button {
+  .continueButton {
     padding: 10px 20px;
-    background-color: #ff8800;
+    background-image: linear-gradient(to right, #FF6489 , #F9B24E);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 10px; /* Add space between buttons */
-    border: 1px solid black;
+    border-radius: 50px;
+  }
+
+  .createAccountButton {
+    padding: 10px 20px;
+    border: 1px solid #FE7E02;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
     border-radius: 50px;
   }
   

@@ -1,0 +1,92 @@
+.container {
+    text-align: center;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 10.5rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 3.5rem;
+    background-color: lightgray;
+  }
+
+.createPost{
+    background-color: #EDEDED;
+    border-radius: 12px;
+    width: 364px;
+    height: 131px;
+    margin-top: 30px;
+}
+
+.postButton {
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, #FF6489 , #F9B24E);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 359px;
+    height: 47px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.postsContainer {
+    display: flex;
+    text-align: start;
+    background-color: #FBFBFB;
+    gap: 18px;
+    width: 364px;
+    margin-left: 31px;
+    margin-right: 31px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+}
+
+.post {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.conteudo {
+    font-size: 25px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.upvotes {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    gap: 5px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    gap: 5px;
+    border-radius: 15px;
+    padding: 5px;
+    
+}
+
+
+
