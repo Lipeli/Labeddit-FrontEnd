@@ -2,6 +2,7 @@
 
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
+import { PostModel } from "./interfaces/postInterfaces"
 
 export const login = async (formData: FormData) => {
 
@@ -15,7 +16,7 @@ export const login = async (formData: FormData) => {
         senha: formData.get('password')
     }
 
-    const res = await fetch('http://localhost:3003/users/login', {
+    const res = await fetch('https://projeto-labeddit-backend-wwbo.onrender.com/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,7 +52,7 @@ export const signup = async (formData: FormData) => {
         senha: formData.get('senha')
     }
 
-    const res = await fetch('http://localhost:3003/users/signup', {
+    const res = await fetch('https://projeto-labeddit-backend-wwbo.onrender.com/users/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -89,7 +90,7 @@ export const createPost = async (formData: FormData) => {
     }
     
     console.log(body)
-    const res = await fetch('http://localhost:3003/posts', {
+    const res = await fetch('https://projeto-labeddit-backend-wwbo.onrender.com/posts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -103,3 +104,72 @@ export const createPost = async (formData: FormData) => {
 
     redirect('/feed')
 }
+
+
+export async function getPosts(): Promise<PostModel[]> {
+    const token = cookies().get('token')?.value
+  
+    const res = await fetch('https://projeto-labeddit-backend-wwbo.onrender.com/posts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: token!
+      },
+    })
+    if (!res.ok) {
+      return []
+    }
+  
+    return res.json()
+  
+  }
+
+  export const upvoteDownvotePost = async (postId: string, vote: boolean) => {
+ 
+    const token = cookies().get('token')?.value
+
+    const body = {
+        upvote: vote
+    }
+console.log(body)
+    const res = await fetch(`https://projeto-labeddit-backend-wwbo.onrender.com/posts/${postId}/upvote`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token!
+        },
+        body: JSON.stringify(body)
+    })
+    if (!res.ok) {
+        return
+    }
+
+    redirect('/feed')
+}
+
+export const logout = async () => {
+
+    const body = {
+        token: {}
+    }
+
+    const res = await fetch('https://projeto-labeddit-backend-wwbo.onrender.com/users/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    })
+    if (!res.ok) {
+        return
+    }
+
+    const {token} = await res.json()
+
+    cookies().set('token', token, {
+      httpOnly:true,
+    })
+
+    redirect("/")
+}
+

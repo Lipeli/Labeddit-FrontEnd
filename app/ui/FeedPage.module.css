@@ -1,11 +1,14 @@
 .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .logo {
     width: 40px;
     height: 40px;
-    margin-left: 10.5rem;
+    margin-left: 45%;
   }
 
   .header {
@@ -14,8 +17,16 @@
     align-items: center;
     padding: 20px;
     height: 3.5rem;
+    width: 100%;
     background-color: lightgray;
   }
+
+.createPostForm {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    word-wrap: break-word;
+}
 
 .createPost{
     background-color: #EDEDED;
@@ -23,6 +34,8 @@
     width: 364px;
     height: 131px;
     margin-top: 30px;
+    text-align: start; 
+    word-wrap: break-word; 
 }
 
 .postButton {
@@ -65,7 +78,7 @@
 .infoContainer {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 5px;
 }
 
@@ -73,7 +86,7 @@
     display: flex;
     flex-direction: row;
     border: 1px solid lightgray;
-    gap: 5px;
+    gap: 20px;
     border-radius: 15px;
     padding: 5px;
 }
@@ -82,10 +95,17 @@
     display: flex;
     flex-direction: row;
     border: 1px solid lightgray;
-    gap: 5px;
+    gap: 15px;
     border-radius: 15px;
     padding: 5px;
     
+}
+
+.line {
+    height: 2px;
+    width: 80%;
+    background-image: linear-gradient(to right, #FF6489 , #F9B24E);
+    margin-top: 20px;
 }
 
 
