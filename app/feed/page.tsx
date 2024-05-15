@@ -28,8 +28,8 @@ async function FeedPage() {
       <div className={styles.line}></div>
       <div>
         {posts.map((posts) => (
-          <div className={styles.postsContainer}>
-            <div key={posts.id} className={styles.post}>
+          <div key={posts.id} className={styles.postsContainer}>
+            <div  className={styles.post}>
               <p>Enviado Por: {posts.creator.apelido}</p>
               <p className={styles.conteudo}><b>{posts.conteúdo}</b></p>
               <div className={styles.infoContainer}>
