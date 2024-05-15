@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Front-End do projeto final Labeddit - Full-Stack
+Este é o projeto final do curso Full-Stack da Labenu.
+
 ## Project deployed on Vercel
 Link: https://labeddit-front-end-alpha.vercel.app/
 
